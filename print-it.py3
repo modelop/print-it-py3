@@ -38,3 +38,12 @@ def metrics_three(datumA, datumB, datumC):
     "foo": 3,
     "bar": "test result"
   }
+
+# modelop.train
+def train_one(datum):
+  print("train_one datum:", flush=True)
+  print(datum, flush=True)
+  yield {
+    "foo": 1,
+    "bar": "training"
+  }
