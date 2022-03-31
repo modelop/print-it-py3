@@ -43,7 +43,4 @@ def metrics_three(datumA, datumB, datumC):
 def train_one(datum):
   print("train_one datum:", flush=True)
   print(datum, flush=True)
-  yield {
-    "foo": 1,
-    "bar": "training"
-  }
+  datum.to_json("outputDir/training-out.json", orient="records", lines=True)
